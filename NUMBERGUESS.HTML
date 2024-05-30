@@ -1,0 +1,52 @@
+<html><body>
+    <center><h1>PLAY GAME... <BR></BR>GUESS THE NUMBER(1-9) </h1>
+<div><h1>GUESS THE NUMBER</h1>
+<input id="guess number">
+<button onclick="check()">CHECK</button>
+<p id="result">
+    Number is wrong / Right
+</p>
+<p id="score">Score:10</p></div></body></html>
+</center><script>
+    var GuessNumber = document.getElementById("guess number")
+    var para = document.getElementById("result")
+    var random = Math.floor(Math.random()*10)+1
+    var Score = document.getElementById("score")
+    var totalscore= 10
+    function check()
+    {
+        var enteredNumber = GuessNumber.value
+        if(random==enteredNumber){
+            console.log("you are right .. congts...")
+            para.textContent="Right"
+            alert("you are right.")
+        }else{
+            totalscore = totalscore-1;
+            score.textContent = "score:"+ totalscore
+            console.log("try more")
+            para.textContent="wrong"
+        }
+    }
+</script>
+<style>
+    div{
+        background-color: purple;
+        border-style: solid;
+        border-color: white;
+        
+        color: aqua;
+       
+        height: 300px;
+        width: 500px;
+        text-align: center;
+        margin :20px;
+        padding-top: 70px;
+        align-content: center;
+       
+
+    }
+    body{
+        background-color: blueviolet;
+    }
+
+</style>
